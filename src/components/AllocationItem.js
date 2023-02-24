@@ -36,9 +36,9 @@ const AllocationItem = (props)=>{
         <tr>
             <td>{ props.department }</td>
             <td>{ currency }{ props.budget }</td>
-            <td><FaPlusCircle size='2.2em' color="red" onClick={ increaseBy10 }></FaPlusCircle></td>
-            <td><FaMinusCircle size='2.2em' color="red" onClick={ decreaseBy10 }></FaMinusCircle></td>
-            <td><FaTrash size='2.2em' color="red" onClick={ deleteItem }></FaTrash></td>
+            <td><FaPlusCircle size='1.5em' color="green" onClick={ increaseBy10 }></FaPlusCircle></td>
+            <td><FaMinusCircle size='1.5em' color="red" onClick={ decreaseBy10 }></FaMinusCircle></td>
+            <td><FaTrash size='1.2em' color="black" onClick={ deleteItem }></FaTrash></td>
         </tr>
     );
 }

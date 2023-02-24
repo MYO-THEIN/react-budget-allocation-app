@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Budget = ()=>{
-    const { spent, currency, dispatch } = useContext(AppContext);
+    const { setBudget, currency, dispatch } = useContext(AppContext);
 
     const changeBudget = (val, max)=>{
         if (val > max) {
@@ -18,6 +18,12 @@ const Budget = ()=>{
             }
         });
     }
+
+    useEffect(()=>{
+        let val = document.getElementById("setBudget").value;
+        if (!val)
+            document.getElementById("setBudget").value = setBudget;
+    })
 
     return (
         <div className="alert alert-primary">
